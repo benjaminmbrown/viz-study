@@ -3,7 +3,6 @@ Based off of Zachary Williams' work here
 https://medium.com/front-end-hacking/learning-the-p5-canvas-drawing-library-in-es6-and-webpack-bf514a679544
 */
 function setup() {
-	let layers =[];
 	createCanvas(window.innerWidth, window.innerHeight);
 	angleMode(DEGREES);
 	imageMode(CENTER);
@@ -30,7 +29,7 @@ function draw(){
 	gfx2 =  gfx;
 
 	image(gfx, 0, 0);
-	rotate(1);
+	rotate(2);
 	image(gfx2, 2, 2);
 	
 	

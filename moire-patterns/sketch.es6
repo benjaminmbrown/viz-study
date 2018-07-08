@@ -3,7 +3,6 @@ Based off of Zachary Williams' work here
 https://medium.com/front-end-hacking/learning-the-p5-canvas-drawing-library-in-es6-and-webpack-bf514a679544
 */
 function setup() {
-	let layers =[];
 	let gfx = createGraphics(window.innerWidth, window.innerHeight);
 	let gfx2;
 
@@ -15,7 +14,6 @@ function setup() {
 	background(40);
 	gfx.stroke(200);
 	gfx.strokeWeight(3);
-	gfx.line(0,0,window.innerWidth, 0);
 	for (let i = 0; i < 1000; i++) {
 		gfx.point(
 			Math.random() *
@@ -28,7 +26,7 @@ function setup() {
 	gfx2 =  gfx;
 
 	image(gfx, 0, 0);
-	rotate(1);
+	rotate(2.5);
 	image(gfx2, 2, 2);
 }
 
