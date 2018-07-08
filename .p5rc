@@ -1,0 +1,8 @@
+{
+  "name": "viz-study",
+  "projects": [
+    "shaders",
+    "moire-patterns",
+    "moire-pattern-animated"
+  ]
+}
