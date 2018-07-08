@@ -29,7 +29,7 @@ function draw(){
 	gfx2 =  gfx;
 
 	image(gfx, 0, 0);
-	rotate(2);
+	rotate(2.5);
 	image(gfx2, 2, 2);
 	
 	
