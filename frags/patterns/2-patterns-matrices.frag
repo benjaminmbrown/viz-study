@@ -55,20 +55,19 @@ void main() {
 	vec2 st = gl_FragCoord.xy/u_resolution;
     vec2 st2 = st;
     
-    vec3 color  = vec3(0.0);
+    vec3 color  = vec3(0.224,0.533,0.032);
     vec3 color2 = color;
  
     tileIt(st, 14.0,12.0);
-    tileIt(st2,19.0,29.0);
+    tileIt(st2,2.0,3.0);
 
     // Use a matrix to rotate the space of single unit
-    st = rotate2D(st,PI*abs(cos(u_time))*0.5);
-    st2 *= rotate2D(st2,PI*abs(sin(-u_time))*0.5);
+    st = rotate2D(st,PI*cos(u_time)*0.5);
+    st2 *= rotate2D(st2,PI*sin(-u_time)*0.5);
     
     // Draw a square
     color = vec3(box(st2,sin(vec2(0.7)),0.1));
     color *= vec3(box(st,vec2(0.7),0.1));
-  //  color *= vec3(box(st2,vec2(0.7),0.1));
 
     
 	gl_FragColor = vec4(color,1.0);
