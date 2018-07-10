@@ -73,6 +73,7 @@ void main() {
     vec2 f_st = fract(st);
 
     float m_dist = 1.;  // minimun distance
+    vec2 m_point;
 
     for (int y = -1; y<=1; y++){
         for (int x = -1; x <= 1; x++){
@@ -86,18 +87,24 @@ void main() {
             vec2 diff = neighbor + point - f_st;
 
             float dist = length(diff);
+            
+            if( dist < m_dist ) {
+                m_dist = dist;
+                m_point = point;
+            }
 
             // m_dist = min(m_dist, dist);
-            //distance field options
-            m_dist = length( abs(m_dist)-dist );
-            //m_dist = length( abs(m_dist)- abs(sin(dist)));
-            m_dist = length( min(abs(m_dist)-dist,0.) );
+            // distance field options
+            // m_dist = length( abs(m_dist)-dist );
+            // m_dist = length( abs(m_dist)- abs(sin(dist)));
+            // m_dist = length( min(abs(m_dist)-dist,0.) );
             // m_dist = length( max(abs(m_dist)-3.,dist) );
         }
     }
-    color+=m_dist;
+    color += m_dist;
     color += 1.-step(.02, m_dist);
-    color.r += step(.98, f_st.x) + step(.98, f_st.y);
+    //color.r += step(.98, f_st.x) + step(.98, f_st.y);
+    color.rg = m_point;
     
     gl_FragColor = vec4(color,1.0);
 }
