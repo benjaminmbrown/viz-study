@@ -38,7 +38,7 @@ float doubleCircleSeat (float x, float a){
 void main() {
     vec2 st = gl_FragCoord.st/u_resolution;
 
-   // float y = blinnWyvillCosineApproximation(st.x);
+   // float y = doubleCircleSeat(st.x);
 
     vec3 color = vec3(y);
 
