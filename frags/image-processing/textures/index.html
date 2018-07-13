@@ -57,21 +57,98 @@
 <body>
     <h1>Image Processing Frags</h1>
     <section>
-        <article><h2>Textures</h2>
+        <article>
+            <h2>Textures</h2>
             Loading a texture, rotating and scaling.
-            <p>sss
-                <canvas 
-                    class="glslCanvas" 
-                    data-fragment-url="texture.frag" 
-                    data-textures="hokusai.jpg"
-                    width="400"
-                    height="400">
+            <p>
+                <canvas class="glslCanvas" data-fragment-url="texture.frag" data-textures="cookie.jpeg" width="400" height="400">
                 </canvas>
             </p>
-        
         </article>
+        <article>
+
+            <h4>Noise on Textures</h4>
+            <p>
+                <canvas class="glslCanvas" data-fragment-url="noise-texture.frag" data-textures="cookie.jpeg" width="400" height="400">
+                </canvas>
+
+            </p>
+
+            <hr/>
+            <h4>Texture Resolution</h4>
+            <p>
+                <canvas class="glslCanvas" data-fragment-url="resolution-texture.frag" data-textures="cookie.jpeg" width="400" height="400">
+                </canvas>
+            </p>
+
+
+        </article>
+        <article>
+
+            <h4>Texture Sprites</h4>
+            <p>Take a segment of the image and rotate through each, animating</p>
+            <p>
+                <h6>Original</h6>
+                <img src="muybridge.jpg" />
+            </p>
+            <p>
+                <canvas class="glslCanvas" data-fragment-url="sprite-texture.frag" data-textures="muybridge.jpg" width="400" height="400">
+                </canvas>
+            </p>
+        </article>
+        <article>
+
+            <p>
+
+                <h6>Add noise and transformations</h6>
+                <canvas class="glslCanvas" data-fragment-url="maxed-texture.frag" data-textures="muybridge.jpg" width="400" height="400">
+                </canvas>
+            </p>
+        </article>
+
+        <article>
+
+                <p>
+    
+                    <h6>Add noise and transformations</h6>
+                    <canvas class="glslCanvas" data-fragment-url="maxed-texture.frag" data-textures="muybridge.jpg" width="400" height="400">
+                    </canvas>
+                </p>
+            </article>
+
+
+            <article>
+
+                    <p>
+        
+                        <h6>Inversion</h6>
+                        <canvas class="glslCanvas" data-fragment-url="inverted-texture.frag" data-textures="muybridge.jpg" width="400" height="400">
+                        </canvas>
+                    </p>
+                </article>
+
+                <article>
+
+                        <p>
+            
+                            <h6>Adding</h6>
+                            <canvas class="glslCanvas" data-fragment-url="add-subtract-texture.frag" data-textures="muybridge.jpg,cookie.jpeg" width="400" height="400">
+                            </canvas>
+                        </p>
+                    </article>
+
+
+                <article>
+
+                        <p>
+            
+                            <h6>Adding</h6>
+                            <canvas class="glslCanvas" data-fragment-url="blending-texture.frag" data-textures="muybridge.jpg,cookie.jpeg" width="400" height="400">
+                            </canvas>
+                        </p>
+                    </article>
     </section>
 
-  
+
 
 </html>
